@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Single Page App Boilerplate",
   "main": "index.html",
-  "scripts": {},
+  "scripts": {
+    "webpack": "webpack --watch"
+  },
   "author": "Thomas Andreo",
   "license": "MIT",
   "devDependencies": {
