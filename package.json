@@ -4,9 +4,9 @@
   "description": "Single Page App Boilerplate",
   "main": "index.html",
   "repository": "https://github.com/tomzmtl/Spark",
-  }
   "scripts": {
-    "webpack": "webpack --watch"
+    "webpack": "webpack --watch",
+    "test": "mocha --opts src/js/test/mocha.opts --harmony || true"
   },
   "author": "Thomas Andreo",
   "license": "MIT",
@@ -16,6 +16,7 @@
     "babel-preset-es2015": "^6.14.0",
     "babel-preset-react": "^6.11.1",
     "babel-preset-stage-0": "^6.5.0",
+    "babel-register": "^6.14.0",
     "eslint": "^2.13.1",
     "eslint-config-airbnb": "^9.0.1",
     "eslint-plugin-import": "^1.14.0",
@@ -24,6 +25,8 @@
     "webpack": "^1.13.2"
   },
   "dependencies": {
+    "expectations": "^0.6.0",
+    "mocha": "^3.0.2",
     "react": "^15.3.1",
     "react-dom": "^15.3.1",
     "react-redux": "^4.4.5",

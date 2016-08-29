@@ -1,0 +1,4 @@
+src/js/test/**/*.spec.js
+--reporter nyan
+--require babel-register
+--require expectations

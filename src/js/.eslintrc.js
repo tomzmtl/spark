@@ -4,6 +4,9 @@ module.exports = {
     es6: true,
     mocha: true,
   },
+  globals: {
+    expect: true,
+  },
   extends: ['airbnb'],
   parserOptions: {
     ecmaVersion: 6,
