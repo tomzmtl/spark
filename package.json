@@ -1,8 +1,10 @@
 {
   "name": "spark",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Single Page App Boilerplate",
   "main": "index.html",
+  "repository": "https://github.com/tomzmtl/Spark",
+  }
   "scripts": {
     "webpack": "webpack --watch"
   },
@@ -22,8 +24,8 @@
     "webpack": "^1.13.2"
   },
   "dependencies": {
-    "react": "^15.3.0",
-    "react-dom": "^15.3.0",
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1",
     "react-redux": "^4.4.5",
     "redux": "^3.5.2"
   }
