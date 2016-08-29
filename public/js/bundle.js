@@ -23122,13 +23122,10 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
 	var Counter = function Counter(_ref) {
 	  var counter = _ref.counter;
-
-	  var props = _objectWithoutProperties(_ref, ['counter']);
-
+	  var onDecrement = _ref.onDecrement;
+	  var onIncrement = _ref.onIncrement;
 	  return _react2.default.createElement(
 	    'div',
 	    null,
@@ -23142,7 +23139,7 @@
 	      null,
 	      _react2.default.createElement(
 	        'button',
-	        { onClick: props.onDecrement },
+	        { onClick: onDecrement },
 	        '-'
 	      ),
 	      _react2.default.createElement(
@@ -23154,7 +23151,7 @@
 	      ),
 	      _react2.default.createElement(
 	        'button',
-	        { onClick: props.onIncrement },
+	        { onClick: onIncrement },
 	        '+'
 	      )
 	    )

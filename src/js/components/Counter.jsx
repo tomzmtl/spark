@@ -1,12 +1,12 @@
 import React, { PropTypes } from 'react';
 
-const Counter = ({ counter, ...props }) => (
+const Counter = ({ counter, onDecrement, onIncrement }) => (
   <div>
     <h2>Hello World!</h2>
     <div>
-      <button onClick={props.onDecrement}>-</button>
+      <button onClick={onDecrement}>-</button>
       <strong> {counter} </strong>
-      <button onClick={props.onIncrement}>+</button>
+      <button onClick={onIncrement}>+</button>
     </div>
   </div>
 );
