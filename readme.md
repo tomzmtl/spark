@@ -4,8 +4,7 @@
 
 ### Tech Stack
 
-* `react`
-* `redux`
-* `babel` `stage-0`
-* `webpack` `dev-server`
+* `react` `redux`
+* `babel` `es2015` `stage-0`
+* `webpack`
 * `eslint` `airbnb`
