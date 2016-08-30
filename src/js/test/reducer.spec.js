@@ -1,49 +1,21 @@
 import reducer from '../reducers/counter';
 
-const testState = (before, action, after) => {
-  expect(reducer(before, action)).toEqual(after);
+const testState = (before, actionType, after) => {
+  const state = { counter: before };
+  const action = { type: actionType };
+  return reducer(state, action).counter === after;
 };
 
 describe('Reducers', () => {
   it('Increments', () => {
-    testState(
-      {
-        counter: 0,
-      },
-      {
-        type: 'INCREMENT_COUNTER',
-      },
-      {
-        counter: 1,
-      }
-    );
+    expect(testState(0, 'INCREMENT_COUNTER', 1)).toBe(true);
   });
 
   it('Decrements', () => {
-    testState(
-      {
-        counter: 1,
-      },
-      {
-        type: 'DECREMENT_COUNTER',
-      },
-      {
-        counter: 0,
-      }
-    );
+    expect(testState(1, 'DECREMENT_COUNTER', 0)).toBe(true);
   });
 
   it('Doesn\'t decrement below 0', () => {
-    testState(
-      {
-        counter: 0,
-      },
-      {
-        type: 'DECREMENT_COUNTER',
-      },
-      {
-        counter: 0,
-      }
-    );
+    expect(testState(0, 'DECREMENT_COUNTER', 0)).toBe(true);
   });
 });
