@@ -6,7 +6,8 @@
   "repository": "https://github.com/tomzmtl/Spark",
   "scripts": {
     "webpack": "webpack --watch",
-    "test": "mocha --opts src/js/test/mocha.opts --harmony || true"
+    "test": "mocha --opts src/js/test/mocha.opts --harmony || true",
+    "travis": "mocha --opts src/js/test/travis.opts --harmony"
   },
   "author": "Thomas Andreo",
   "license": "MIT",

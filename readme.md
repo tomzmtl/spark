@@ -1,3 +1,5 @@
+![Travis CI status](https://api.travis-ci.org/tomzmtl/Spark.svg)
+
 # Spark
 
 ## A boilerplate for single-page apps
