@@ -23,7 +23,7 @@
     "eslint-plugin-import": "2.2.0",
     "eslint-plugin-jsx-a11y": "4.0.0",
     "eslint-plugin-react": "6.10.0",
-    "webpack": "1.14.0"
+    "webpack": "2.2.1"
   },
   "dependencies": {
     "chai": "3.5.0",
