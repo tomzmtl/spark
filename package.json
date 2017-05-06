@@ -7,8 +7,8 @@
   "scripts": {
     "dev": "webpack --watch",
     "lint": "eslint src/app/**/*.js",
-    "test": "mocha --opts src/js/test/mocha.opts --harmony || true",
-    "travis": "mocha --opts src/js/test/travis.opts --harmony"
+    "test": "mocha --opts mocha.opts --harmony || true",
+    "travis": "mocha --opts mocha.travis.opts --harmony"
   },
   "author": "Thomas Andreo",
   "license": "MIT",
