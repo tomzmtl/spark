@@ -10464,15 +10464,15 @@ var _reactRedux = __webpack_require__(82);
 
 var _redux = __webpack_require__(91);
 
-var _App = __webpack_require__(97);
+var _Counter = __webpack_require__(98);
 
-var _App2 = _interopRequireDefault(_App);
+var _Counter2 = _interopRequireDefault(_Counter);
 
-var _counter = __webpack_require__(98);
+var _reducer = __webpack_require__(99);
 
-var _counter2 = _interopRequireDefault(_counter);
+var _reducer2 = _interopRequireDefault(_reducer);
 
-var _store = __webpack_require__(99);
+var _store = __webpack_require__(95);
 
 var _store2 = _interopRequireDefault(_store);
 
@@ -10483,13 +10483,27 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 document.addEventListener('DOMContentLoaded', function () {
   _reactDom2.default.render(_react2.default.createElement(
     _reactRedux.Provider,
-    { store: (0, _redux.createStore)(_counter2.default, _store2.default) },
-    _react2.default.createElement(_App2.default, null)
+    { store: (0, _redux.createStore)(_reducer2.default, _store2.default) },
+    _react2.default.createElement(_Counter2.default, null)
   ), document.getElementById('app'));
 });
 
 /***/ }),
 /* 95 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = {
+  counter: 0
+};
+
+/***/ }),
+/* 96 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10512,7 +10526,7 @@ var decrementCounter = exports.decrementCounter = function decrementCounter() {
 };
 
 /***/ }),
-/* 96 */
+/* 97 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10573,7 +10587,7 @@ Counter.propTypes = {
 exports.default = Counter;
 
 /***/ }),
-/* 97 */
+/* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10585,9 +10599,9 @@ Object.defineProperty(exports, "__esModule", {
 
 var _reactRedux = __webpack_require__(82);
 
-var _counter = __webpack_require__(95);
+var _actions = __webpack_require__(96);
 
-var _Counter = __webpack_require__(96);
+var _Counter = __webpack_require__(97);
 
 var _Counter2 = _interopRequireDefault(_Counter);
 
@@ -10602,10 +10616,10 @@ var mapStateToProps = function mapStateToProps(state) {
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     onIncrement: function onIncrement() {
-      dispatch((0, _counter.incrementCounter)());
+      dispatch((0, _actions.incrementCounter)());
     },
     onDecrement: function onDecrement() {
-      dispatch((0, _counter.decrementCounter)());
+      dispatch((0, _actions.decrementCounter)());
     }
   };
 };
@@ -10613,7 +10627,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(_Counter2.default);
 
 /***/ }),
-/* 98 */
+/* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10645,20 +10659,6 @@ exports.default = function (state, action) {
     default:
       return state;
   }
-};
-
-/***/ }),
-/* 99 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = {
-  counter: 0
 };
 
 /***/ }),

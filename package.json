@@ -1,11 +1,12 @@
 {
   "name": "spark",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Single Page App Boilerplate",
   "main": "index.html",
-  "repository": "https://github.com/tomzmtl/Spark",
+  "repository": "https://github.com/tomzmtl/spark",
   "scripts": {
     "dev": "webpack --watch",
+    "lint": "eslint src/app/**/*.js",
     "test": "mocha --opts src/js/test/mocha.opts --harmony || true",
     "travis": "mocha --opts src/js/test/travis.opts --harmony"
   },
@@ -18,11 +19,11 @@
     "babel-preset-react": "6.23.0",
     "babel-preset-stage-0": "6.22.0",
     "babel-register": "6.23.0",
-    "eslint": "3.16.1",
+    "eslint": "3.19.0",
     "eslint-config-airbnb": "14.1.0",
     "eslint-plugin-import": "2.2.0",
-    "eslint-plugin-jsx-a11y": "4.0.0",
-    "eslint-plugin-react": "6.10.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.9.0",
     "webpack": "2.2.1"
   },
   "dependencies": {
