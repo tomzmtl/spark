@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import reducer from '../reducer';
+import reducer from '../counter';
 
 const testState = (before, actionType, after) => {
   const state = { counter: before };
