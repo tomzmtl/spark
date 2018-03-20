@@ -1,2 +1,9 @@
 @import 'core/normalize';
 @import 'core/variables';
+
+@import url('https://fonts.googleapis.com/css?family=Farsan|Open+Sans');
+
+html, body {
+  background: #ffb429;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+}
