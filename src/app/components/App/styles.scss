@@ -1,19 +1,25 @@
 .App {
-  margin: 100px auto 0;
-  max-width: 300px;
+  display: flex;
+  height: 100vh;
+  background: #ffb429;
+  transition: 1s ease-in-out;
 
   &__wrapper {
-    padding: 30px;
-    margin-top: 40px;
-    background: white;
-    border-radius: 3px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    margin: 160px auto 0;
+    width: 100%;
   }
 
   &__title {
+    margin: 0;
     text-align: center;
     font-family: 'Farsan', sans-serif;
     font-size: 70px;
     color: white;
   }
+
+  &--theme-0 { background: #ffb429; }
+  &--theme-1 { background: #38ee8e; }
+  &--theme-2 { background: #a3ee38; }
+  &--theme-3 { background: #38aeee; }
+  &--theme-4 { background: #ee386e; }
 }
