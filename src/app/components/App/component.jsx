@@ -16,7 +16,7 @@ const App = ({ counter }) => {
     <div className={classes}>
       <div className="App__wrapper">
         <h1 className="App__title">Spark!</h1>
-        <h2 className="App__subtitle">Yet another React WebApp boilerplate.</h2>
+        <h2 className="App__subtitle">Yet another React boilerplate.</h2>
         <Counter />
         <a className="App__github" href="https://github.com/tomzmtl/spark" target="blank">
           <img

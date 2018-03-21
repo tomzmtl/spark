@@ -1,8 +1,8 @@
-![Travis CI status](https://api.travis-ci.org/tomzmtl/Spark.svg)
+[![Build Status](https://travis-ci.org/tomzmtl/spark-core.svg?branch=master)](https://travis-ci.org/tomzmtl/spark-core)
 
 # Spark
 
-## A boilerplate for single-page apps
+## Yet another React boilerplate
 
 ### Tech Stack
 

@@ -5,8 +5,11 @@
   "main": "index.html",
   "repository": "https://github.com/tomzmtl/spark",
   "scripts": {
+    "build": "webpack",
     "dev": "webpack --watch & nodemon src/server",
     "lint": "eslint src/app/**/*.js",
+    "postinstall": "npm run build",
+    "start": "node src/server",
     "test": "mocha --opts mocha.opts --harmony || true",
     "travis": "mocha --opts mocha.travis.opts --harmony"
   },
