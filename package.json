@@ -11,7 +11,7 @@
     "postinstall": "npm run build",
     "start": "node src/server",
     "test": "mocha --opts mocha.opts --harmony || true",
-    "travis": "mocha --opts mocha.travis.opts --harmony"
+    "test:ci": "mocha --opts mocha.travis.opts --harmony"
   },
   "author": "Thomas Andreo",
   "license": "MIT",
