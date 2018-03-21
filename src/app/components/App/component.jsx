@@ -9,14 +9,22 @@ import './styles.scss';
 const App = ({ counter }) => {
   const classes = classnames({
     App: true,
-    [`App--theme-${counter % 5}`]: true,
+    [`App--theme-${counter % 6}`]: true,
   });
 
   return (
     <div className={classes}>
       <div className="App__wrapper">
         <h1 className="App__title">Spark!</h1>
+        <h2 className="App__subtitle">Yet another React WebApp boilerplate.</h2>
         <Counter />
+        <a className="App__github" href="https://github.com/tomzmtl/spark" target="blank">
+          <img
+            className="App__github-img"
+            src="/public/images/github-logo.png"
+            alt="See GitHub repo"
+          />
+        </a>
       </div>
     </div>
   );
