@@ -17,3 +17,11 @@ Spark is an opinionated WebApp boilerplate.
 
 * Travis CI
 * Heroku
+
+### Features
+
+#### Copy assets to dist folder
+
+All assets in `src/assets` will be copied in `/dist` automatically, on build and change.
+
+Uses `copy-webpack-plugin`. See webpack configuration.

@@ -1,10 +1,11 @@
-module.exports = {
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
+
+module.exports = {
   entry: ['./src/app'],
   output: {
-    filename: 'dist/js/bundle.js'
+    filename: 'dist/js/bundle.js',
   },
-
   module: {
     rules: [
       {
@@ -16,23 +17,25 @@ module.exports = {
         test: /\.scss$/,
         use: [
           {
-             // creates style nodes from JS strings
+            // creates style nodes from JS strings
             loader: 'style-loader',
           },
           {
-             // translates CSS into CommonJS
+            // translates CSS into CommonJS
             loader: 'css-loader',
           },
           {
-             // compiles Sass to CSS
+            // compiles Sass to CSS
             loader: 'sass-loader',
           },
         ],
       },
-    ]
+    ],
   },
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx'],
   },
-
-}
+  plugins: [
+    new CopyWebpackPlugin([{ from: './src/assets', to: './dist' }]),
+  ],
+};
