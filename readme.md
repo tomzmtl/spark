@@ -13,11 +13,6 @@ Spark is an opinionated WebApp boilerplate.
 * **Mocha** Test framework
 * **Chai** Assertion library
 
-### Additional integration
-
-* Travis CI
-* Heroku
-
 ### Features
 
 #### Travis CI configuration
