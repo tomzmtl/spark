@@ -15,6 +15,14 @@ Spark is an opinionated WebApp boilerplate.
 
 ### Features
 
+#### Express backend
+
+Routing is handled by a minimalist express server.
+
+#### Handlebars templating
+
+Express uses `handlebars` as the default templating language.
+
 #### Travis CI configuration
 
 There is a very basic `.travis.yml` to setup the CI. Also see `mocha.travis.opts` for a specific Mocha configuration for Travis.
