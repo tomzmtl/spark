@@ -2,9 +2,8 @@ import { expect } from 'chai';
 import reducer from '../counter';
 
 const testState = (before, actionType, after) => {
-  const state = { counter: before };
   const action = { type: actionType };
-  return reducer(state, action).counter === after;
+  return reducer(before, action) === after;
 };
 
 describe('Reducers', () => {
