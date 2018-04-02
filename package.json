@@ -1,6 +1,6 @@
 {
   "name": "spark",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Single Page App Boilerplate",
   "main": "index.html",
   "repository": "https://github.com/tomzmtl/spark",

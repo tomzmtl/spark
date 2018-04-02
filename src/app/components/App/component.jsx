@@ -25,7 +25,7 @@ const App = ({ counter, route }) => {
 
 App.propTypes = {
   counter: PropTypes.number.isRequired,
-  route: routerPropTypes.route, // eslint-disable-line react/no-typos
+  route: routerPropTypes.route, // eslint-disable-line
 };
 
 export default App;
