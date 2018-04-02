@@ -1,4 +1,5 @@
-const express = require('express')
+const express = require('express');
+
 const app = express();
 const path = require('path');
 
@@ -19,13 +20,14 @@ app.set('views', path.join(__dirname, './views'));
 app.use('/public', express.static(path.join(__dirname, '../../dist')));
 
 app.get('/favicon.ico', (req, res) => {
-  res.status(200).set({ 'Content-Type': 'image/x-icon' }).send()
+  res.status(200).set({ 'Content-Type': 'image/x-icon' }).send();
 });
 
-app.get('/', (req, res) => {
+app.get('*', (req, res) => {
   res.render('index');
 });
 
 app.listen(PORT, () => {
-  console.log('Spark listening on port 3000!')
+  // eslint-disable-next-line no-console
+  console.log('Spark listening on port 3000!');
 });
