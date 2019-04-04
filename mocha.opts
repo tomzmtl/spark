@@ -1,3 +1,3 @@
 src/**/*.spec.js
 --reporter nyan
---require babel-register
+--require @babel/register

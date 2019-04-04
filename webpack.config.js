@@ -1,4 +1,4 @@
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 
 module.exports = {
@@ -6,12 +6,18 @@ module.exports = {
   output: {
     filename: 'dist/js/bundle.js',
   },
+  mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+          },
+        },
       },
       {
         test: /\.scss$/,
@@ -36,6 +42,11 @@ module.exports = {
     extensions: ['.js', '.jsx'],
   },
   plugins: [
-    new CopyWebpackPlugin([{ from: './src/assets', to: './dist' }]),
+    new CopyPlugin([
+      {
+        from: './src/assets',
+        to: './dist',
+      },
+    ]),
   ],
 };

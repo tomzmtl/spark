@@ -3,9 +3,14 @@ module.exports = {
     browser: true,
     es6: true,
     mocha: true,
+    node: true,
   },
   globals: {},
-  extends: ['airbnb'],
+  extends: [
+    'eslint:recommended',
+    'plugin:react/recommended',
+  ],
+  parser: 'babel-eslint',
   parserOptions: {
     ecmaVersion: 6,
     ecmaFeatures: {
@@ -20,5 +25,11 @@ module.exports = {
       exports: 'always-multiline',
       functions: 'ignore',
     }],
+  },
+  settings: {
+    react: {
+      pragma: "React",
+      version: "detect",
+    },
   },
 };
